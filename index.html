@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <link href="logo.png" rel="shortcut icon" type="image/x-icon">
+  <title>Earth2023的游戏网站</title>
+  <script src="time.js"></script>
+  <script src="banF12_youjian.js"></script>
+</head>
+<body>
+<style>
+a {
+    text-decoration: none;
+}
+h1 {
+    color: black;
+    text-align: center;
+}
+h3 {
+    color: #96fa01;
+    text-align: center;
+}
+.Producer
+{
+    text-align: center;
+}
+.aa1
+{
+    color: black;
+}
+#y
+    {
+        color: black;
+    }
+.aaa {
+  background: #ffffff;
+  /* 创建渐变 */
+  background-image: -webkit-linear-gradient(top, #4dd4cf, #04f124);
+  background-image: -moz-linear-gradient(top, #4dd4cf, #04f124);
+  background-image: -ms-linear-gradient(top, #4dd4cf, #04f124);
+  background-image: -o-linear-gradient(top, #4dd4cf, #04f124);
+  background-image: linear-gradient(to bottom, #4dd4cf, #04f124);
+  /* 给按钮添加圆角 */
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 18px;
+  text-shadow: 3px 2px 1px #4dd4cf;
+  -webkit-box-shadow: 6px 5px 15px #ffffff;
+  -moz-box-shadow: 6px 5px 15px #ffffff;
+  box-shadow: 6px 5px 15px #ffffff;
+  font-family: "Adobe 宋体 Std L",serif;
+  color: #ffffff;
+  font-size: 27px;
+  padding: 19px;
+  text-decoration: none;
+}
+/* 悬停样式 */
+.aaa:hover {
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #4dd4cf, #04f124);
+  background-image: -moz-linear-gradient(top, #4dd4cf, #04f124);
+  background-image: -ms-linear-gradient(top, #4dd4cf, #04f124);
+  background-image: -o-linear-gradient(top, #4dd4cf, #04f124);
+  background-image: linear-gradient(to bottom, #4dd4cf, #04f124);
+  text-decoration: none;
+}
+.background{
+  filter: blur(10px);
+  position:fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  min-width: 1000px;
+  z-index:-10;
+  zoom: 1;
+  background-color: #fff;
+  background: url(https://api.likepoems.com/img/bing);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center 0;
+}
+.cishu {
+  text-align: center;
+}
+.content{
+  filter: blur(1px);
+  width:2000px;
+  height:40px;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+}
+#hitokoto_text {
+  text-align: center;
+}
+</style>
+<div class="background"></div>
+<div class="adas">
+  <span><strong><a class="aa1" href="https://game.earth2023.top/" target="_blank">Earth2023的游戏网站</a></strong></span>
+  <br>
+  <br>
+  <span><strong><a class="aa1" href="https://game.earth2023.top/" target="_blank">Game website for Earth2023</a></strong></span>
+  <br>
+  <br>
+  <label><strong>当前时间：</strong><label id="time_Label"></label></label>
+  <hr>
+</div>
+<div class="content">
+  <img alt="Earth2023" src="logo.png" class="img" height="300" width="300"/>
+</div>
+<h2 id="hitokoto_text"></h2>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const hitokoto = document.querySelector('#hitokoto_text')
+      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+      hitokoto.innerText = "每日一语：" + data.hitokoto
+    })
+    .catch(console.error)
+</script>
+<h1><a class="aa1" href="https://earth2023.top/" target="_blank">欢迎来到Earth2023的游戏网站！</a></h1>
+<hr>
+<h3>2048：<a class="aa1" href="https://game.earth2023.top/2048/index.html" target="_blank">2048/index.html</a></h3>
+<h3>糖豆人：<a class="aa1" href="https://game.earth2023.top/pacman_canvas/index.htm" target="_blank">pacman_canvas/index.htm</a></h3>
+<h3>俄罗斯方块：<a class="aa1" href="https://game.earth2023.top/tetris/index.html" target="_blank">tetris/index.html</a></h3>
+<hr>
+<div class="cishu">
+  <h4>该网站访问次数：</h4>
+  <img alt="访问次数" src="https://counter.likepoems.com/get/@:game.earth2023.top">
+</div>
+<hr>
+<div class="Producer">
+  <p>©2023 By Earth2023</p>
+  <p>&nbsp;&nbsp;如有侵权，我们必究到底！</p>
+</div>
+</body>
+</html>
